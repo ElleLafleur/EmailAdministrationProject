@@ -1,5 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
+import java.util.random.RandomGenerator;
 
 /*It should generate a new email based on the
 employee’s first name, last name, and department
@@ -35,6 +36,13 @@ public class EmailInfo {
                 .toString();
 
         return password;
+    }
+
+    public static void setMailboxCapacity(){
+        Random mailboxCapicity = new Random(); //instance of random class
+        int upperbound = 101;
+        int capacity = mailboxCapicity.nextInt(upperbound);
+        System.out.printf("Mailbox Capacity: " + capacity + "GB");
     }
 
 
